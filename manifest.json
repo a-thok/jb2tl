@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "泉州音字彙臺羅版",
+  "description": "共泉州音字彙的拼音方案換做臺羅",
+  "version": "1.0.0",
+  "author": "A Thok",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://alt.reasoning.cs.ucla.edu/jinbo/dzl/lookup.php"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
