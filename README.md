@@ -1,0 +1,1 @@
+共[泉州音字彙](http://alt.reasoning.cs.ucla.edu/jinbo/dzl/lookup.php)的拼音方案換做臺羅
