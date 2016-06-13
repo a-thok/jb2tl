@@ -24,7 +24,7 @@
       replace('e', 'er').
       replace('ê', 'e').
       replace('y', 'ir').
-      replace(/o</, 'oo<').
+      replace(/o(<\/[^u])/, function (s, $1) { return 'oo' + $1; }).
       replace('ou', 'o').
       // 鼻化韵
       replace(/<u>(\w+)<\/u>/, function (s, $1) { return $1 + 'nn'; }).
