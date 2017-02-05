@@ -27,7 +27,7 @@
       replace('o<', 'oo<').
       replace('ou', 'o').
       // 鼻化韵
-      replace(/<u>(\w+)<\/u>/, function (s, $1) {return $1 + 'nn'; }).
+      replace(/<u>(\w+)<\/u>/, function (s, $1) { return $1 + 'nn'; }).
       // 鼻化声母
       replace(/(b|l|g)(\w*)(ng|nn)/, function (s, $1, $2, $3) {
         var initial;
