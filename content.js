@@ -43,6 +43,7 @@
       }).
       replace('oonn', 'onn').
       replace(/^b</, 'm<').
+      replace(/^g</, 'ng<').
       // 声调
       replace(/(\w)(<sup>)(\d)/, function (s, $1, $2, $3) {
         var index = jb.indexOf(+$3);
