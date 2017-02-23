@@ -15,7 +15,7 @@
       replace(/^d/, 't').
       replace(/^g/, 'k').
       replace(/^m/, 'b').
-      replace(/^ng(\w)/, function (s, $1) { return 'g' + $1; }).
+      replace(/^ng/, 'g').
       replace(/^z/, 'ts').
       replace(/^c/, 'tsh').
       // 韵母
@@ -24,7 +24,7 @@
       replace('e', 'er').
       replace('ê', 'e').
       replace('y', 'ir').
-      replace(/o(<\/[^u])/, function (s, $1) { return 'oo' + $1; }).
+      replace('o<', 'oo<').
       replace('ou', 'o').
       // 鼻化韵
       replace(/<u>(\w+)<\/u>/, function (s, $1) { return $1 + 'nn'; }).
@@ -40,9 +40,12 @@
         }
         var ending = $3 === 'ng' ? $3 : '';
         return initial + $2 + ending;
-      })
+      }).
+      replace('oonn', 'onn').
+      replace(/^b</, 'm<').
+      replace(/^g</, 'ng<').
       // 声调
-      .replace(/(\w)(<sup>)(\d)/, function (s, $1, $2, $3) {
+      replace(/(\w)(<sup>)(\d)/, function (s, $1, $2, $3) {
         var index = jb.indexOf(+$3);
         var ending = '';
         if (index === 3 || index === 7) {
